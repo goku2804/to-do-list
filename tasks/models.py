@@ -1,9 +1,8 @@
 from django.db import models
 
-# Create your models here.
 class Task(models.Model):
-    title = models.CharField(max_length=200)
-    completed = models.BooleanField(default=False)
+    subject = models.CharField(max_length=200)
+    notes = models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.subject
